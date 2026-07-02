@@ -1,0 +1,11 @@
+# Credenciales y entornos
+.env
+*.secret
+config.json
+
+# Archivos del sistema y editores
+.DS_Store
+.idea/
+.vscode/
+.clasp.json
+node_modules/
