@@ -1,15 +1,23 @@
-# ticket-flow-ai
+# FinSheetFlow
 
-Herramienta open-source para automatizar la extracción de datos de tickets de compra físicos mediante la API de Gemini (con salidas estructuradas JSON) y su inserción automática en una base de datos de Google Sheets.
+**FinSheetFlow** es un motor *open-source* y *serverless* desarrollado en Google Apps Script que automatiza por completo la gestión de tus finanzas personales directamente en Google Sheets.
 
-La arquitectura está diseñada bajo el enfoque **"Drop Folder" (Carpeta Segura)**. El sistema no expone ningún endpoint ni URL pública en internet, operando de manera 100% privada e impenetrable mediante activadores internos basados en tiempo.
+---
 
-## ✨ Características
-- **OCR Avanzado:** Extrae automáticamente la fecha de compra, el nombre del establecimiento comercial y los productos.
-- **Categorización Inteligente:** Clasifica cada producto bajo reglas financieras (`Comida`, `Limpieza`, `Ropa`, `Mascotas`, `Jardín`, `Muebles`, `Mantenimiento`).
-- **Control de Gastos:** Discierne entre `Necesidad` y `Deseo` para ayudar a optimizar el presupuesto mensual.
-- **Privacidad:** Los datos viajan directamente entre tu almacenamiento/script y la API, sin intermediarios.
+### 📸 OCR de Tickets con IA (Gemini API)
+*   **OCR Avanzado:** Extrae automáticamente la fecha de compra, el nombre del establecimiento comercial y el desglose de productos desde una imagen (`.jpg`, `.png`) o archivo `.pdf`.
+*   **Categorización Inteligente:** Clasifica cada producto bajo reglas financieras configurables (`Comida`, `Limpieza`, `Ropa`, `Mascotas`, `Jardín`, `Muebles`, `Mantenimiento`).
+*   **Control de Gastos:** Discierne entre `Necesidad` y `Deseo` aplicando principios de la ley de Pareto para ayudarte a optimizar el presupuesto mensual.
 
+### 🏦 Parseadores Bancarios Nativos
+Permite procesar, limpiar y estructurar archivos de extractos reales sin intermediarios opacos:
+*   **American Express (`.csv`)**
+*   **Banca March (`.xlsx`)**
+
+### 🔒 Privacidad 
+Los datos viajan directamente entre tu almacenamiento/script de Google y la API de Google AI Studio. **Sin servidores intermedios, sin bases de datos externas de terceros y sin ceder tu información financiera.**
+
+---
 ## 🛠️ Arquitectura y Funcionamiento
 
 El flujo de datos opera de forma pasiva y eficiente en los servidores de Google:
@@ -37,10 +45,26 @@ El flujo de datos opera de forma pasiva y eficiente en los servidores de Google:
     - `SHEET_NAME`: Nombre de la pestaña (opcional, por defecto `Historial_Tickets`).
     - `DRIVE_FOLDER_ID`: Identificador de la carpeta
     - `SPREADSHEET_ID`: Identificador del Google Sheet
+---
 
+## ☕ Soporte y Contribuciones
 
-## 📐 JSON Schema Empleado
-El modelo fuerza una respuesta estricta utilizando `responseSchema`. Puedes consultar la estructura exacta en los archivos del repositorio para adaptar los enumerados de categorías a tus propias necesidades de visualización o analítica.
+Este proyecto es y seguirá siendo **100% de código abierto**. Si los parseadores bancarios o o la integración de Gemini te facilita la organización diaria:
+
+*   **Invítame a un café** en mi página de [Ko-fi](https://ko-fi.com/tomeu) 
+*   Reporta fallos o abre un **Pull Request** si detectas cambios en los formatos de los extractos de los bancos. ¡Toda ayuda es bienvenida!
+
+---
+
+## ⚠️ Exención de Responsabilidad Financiera y Legal (Disclaimer)
+
+**FinSheetFlow** es una herramienta de automatización de datos de código abierto y uso personal.
+
+* **No es asesoramiento financiero:** El software, los informes generados y las plantillas visuales asociadas se proporcionan únicamente con fines informativos y organizativos. En ningún caso constituyen asesoramiento financiero, legal, fiscal o de inversión.
+* **Responsabilidad de los datos:** Los parseadores bancarios y el motor de IA (Gemini) dependen de estructuras de terceros que pueden cambiar sin previo aviso. Es responsabilidad exclusiva del usuario verificar la exactitud de los datos importados (fechas, importes y categorías) antes de tomar cualquier decisión económica.
+* **Limitación de responsabilidad:** El autor no se hace responsable de posibles errores en el código, fallos en las importaciones, pérdida de datos, alucinaciones de la IA o de cualquier perjuicio económico directo o indirecto derivado del uso de este software. El uso de esta herramienta se realiza bajo el propio riesgo del usuario.
+
+---
 
 ## 📄 Licencia
 Este proyecto está bajo la Licencia MIT. Siéntete libre de clonarlo, modificarlo y enviar tus Pull Requests.
