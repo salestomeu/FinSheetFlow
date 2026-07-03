@@ -44,3 +44,5 @@ El modelo fuerza una respuesta estricta utilizando `responseSchema`. Puedes cons
 
 ## 📄 Licencia
 Este proyecto está bajo la Licencia MIT. Siéntete libre de clonarlo, modificarlo y enviar tus Pull Requests.
+
+* **☕ Invítame a un café:** Si este script te ha ahorrado tiempo, puedes apoyar el proyecto en [Ko-fi](https://ko-fi.com/tomeu).
