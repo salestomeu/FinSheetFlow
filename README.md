@@ -38,8 +38,8 @@ El flujo de datos opera de forma pasiva y eficiente en los servidores de Google:
 * ** Copia la cadena de texto generada (empieza por `AIzaSy...`). *Nota: La capa gratuita permite hasta 1.500 peticiones diarias, ideal para este entorno.*
 ### 2. Infraestructura en Google Drive y Sheets.
 * **Carpeta de Entrada (Drop Folder):** Crea una carpeta en Google Drive donde subirás tus tickets. Copia su ID de la URL del navegador (la cadena alfanumérica que va después de `folders/`).
-* **Hoja de Cálculo (Google Sheets):** Crea un archivo de Google Sheets nuevo. Copia su ID de la URL (la cadena larga entre `/d/` y `/edit`). Dentro del libro, crea una pestaña o define el nombre que quieras usar para almacenar el historial (ej: `Historial_Tickets`).
-### 3. Ve a `Extensiones > Apps Script`, borra el código por defecto y pega el contenido de `src/ticket.js`.
+* **Obtener la Plantilla Oficial de FinSheetFlow:** Para no tener que diseñar las pestañas desde cero, puedes clonar la plantilla optimizada con la pestaña de instrucciones y el menú ya integrados: https://docs.google.com/spreadsheets/d/17uY7_En0xcvoR4LDboTAqMN8Ew28sxi4yCqm1pZSgkE/copy
+### 3. Ve a `Extensiones > Apps Script`, borra el código por defecto y sube todos los ficheros de la carpeta`src/`.
 ### 4. En la configuración del Script (icono de engranaje), añade las siguientes **Propiedades del script**:
     - `GEMINI_API_KEY`: Tu clave privada de la API.
     - `SHEET_NAME`: Nombre de la pestaña (opcional, por defecto `Historial_Tickets`).
@@ -65,7 +65,7 @@ Este proyecto es y seguirá siendo **100% de código abierto**. Si los parseador
 * **Limitación de responsabilidad:** El autor no se hace responsable de posibles errores en el código, fallos en las importaciones, pérdida de datos, alucinaciones de la IA o de cualquier perjuicio económico directo o indirecto derivado del uso de este software. El uso de esta herramienta se realiza bajo el propio riesgo del usuario.
 
 ---
-
+https://docs.google.com/spreadsheets/d/17uY7_En0xcvoR4LDboTAqMN8Ew28sxi4yCqm1pZSgkE/copy
 ## 📄 Licencia
 Este proyecto está bajo la Licencia MIT. Siéntete libre de clonarlo, modificarlo y enviar tus Pull Requests.
 

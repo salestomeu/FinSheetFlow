@@ -14,8 +14,6 @@ function onOpen() {
  */
 function menuCargarTickets() {
     // Aquí llamas a la función que dispara tu flujo Drop Folder o procesa la carpeta
-    SpreadsheetApp.getUi().alert('📸 FinSheetFlow', 'Escaneando la carpeta de Drive y procesando tickets con Gemini...', SpreadsheetApp.getUi().ButtonSet.OK);
-
     Folder.procesarCarpeta();
 }
 

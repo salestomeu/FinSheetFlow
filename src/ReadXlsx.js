@@ -42,7 +42,6 @@ const ExtractorXLSX = {
 
             // Leemos la primera pestaña del libro abierto (sea el temporal o el del móvil)
             const datosExcel = srcSpreadsheet.getSheets()[0].getDataRange().getValues();
-
             let filaCabeceraEncontrada = false;
             let indiceFecha = 0;
             let indiceConcepto = 3;
