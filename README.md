@@ -44,8 +44,8 @@ El flujo de datos opera de forma pasiva y eficiente en los servidores de Google:
     - `GEMINI_API_KEY`: Tu clave privada de la API.
     - `SHEET_NAME`: Nombre de la pestaña (opcional, por defecto `Historial_Tickets`).
     - `DRIVE_FOLDER_ID`: Identificador de la carpeta
-    - `SPREADSHEET_ID`: Identificador del Google Sheet
----
+    - `SPREADSHEET_ID`: Identificador de FihSheetFlow Google Sheet
+    - `INGRESOS_GASTOS`: Identificador de Ingresos y Gastos Google Sheet
 
 ## ☕ Soporte y Contribuciones
 
@@ -65,7 +65,11 @@ Este proyecto es y seguirá siendo **100% de código abierto**. Si los parseador
 * **Limitación de responsabilidad:** El autor no se hace responsable de posibles errores en el código, fallos en las importaciones, pérdida de datos, alucinaciones de la IA o de cualquier perjuicio económico directo o indirecto derivado del uso de este software. El uso de esta herramienta se realiza bajo el propio riesgo del usuario.
 
 ---
+Documento FinSheetFlow:
 https://docs.google.com/spreadsheets/d/17uY7_En0xcvoR4LDboTAqMN8Ew28sxi4yCqm1pZSgkE/copy
+
+Documento Ingresos y Gastos:
+https://docs.google.com/spreadsheets/d/1JmGlisxVG0yTu2mDnacsDl4PNVyGZSwZoMypWpo7RX4/copy
 ## 📄 Licencia
 Este proyecto está bajo la Licencia MIT. Siéntete libre de clonarlo, modificarlo y enviar tus Pull Requests.
 
