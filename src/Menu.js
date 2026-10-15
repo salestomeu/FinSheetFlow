@@ -12,5 +12,5 @@ function onOpen() {
 function menuCargarTickets() {
     // Aquí llamas a la función que dispara tu flujo Drop Folder o procesa la carpeta
     Folder.procesarCarpeta();
-    ejecutarPipelineBancario("Octubre");
+    ejecutarPipelineBancario(Config.obtenerMesConfiguracion());
 }

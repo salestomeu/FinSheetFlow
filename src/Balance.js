@@ -1,6 +1,5 @@
 function ejecutarPipelineBancario(month) {
     // ... (Toda tu lógica inicial de procesar archivos CSV y XLSX en la carpeta drop)
-    // ... (Eso llena tus pestañas locales 'Historial_Banco' e 'Historial_Tickets')
 
     // =================================================================
     // 📈 FASE DE LECTURA Y AGREGACIÓN (Espacio Global / Main)
@@ -72,18 +71,21 @@ function ejecutarPipelineBancario(month) {
         }
     }
 
-
+    // =================================================================
+    // 🧪 MODO PRUEBA / INYECCIÓN POR MES
+    // =================================================================
     const mapaPruebaUnMes = new Map();
+
     if (mapaMesesCategorias.has(month)) {
+        Logger.log(`🧪 MODO PRUEBA: Set de datos aislado de forma exclusiva para la pestaña ${month}.`);
         mapaPruebaUnMes.set(month, mapaMesesCategorias.get(month));
-        Logger.log("🧪 MODO PRUEBA: Set de datos aislado de forma exclusiva para la pestaña 'Septiembre'.");
+
+        // Inyectamos el mapa filtrado para ese mes específico
+        ConsolidadorPlantilla.inyectarTotales(mapaPruebaUnMes);
     } else {
-        Logger.log("⚠️ Aviso Prueba: El mapa analítico no ha recopilado ninguna transacción fechada en Septiembre.");
+        Logger.log(`⚠️ Aviso Prueba: El mapa analítico no ha recopilado ninguna transacción fechada en ${month}.`);
     }
 
-    // Pasamos el mapa que contiene única y exclusivamente la clave "Junio"
-    ConsolidadorPlantilla.inyectarTotales(mapaPruebaUnMes);
-
-    // Pasamos únicamente la estructura de datos pura calculada.
-    //ConsolidadorPlantilla.inyectarTotales(mapaMesesCategorias);
+    // Para procesar todos los meses completos (sin aislamiento), descomentarías la siguiente línea:
+    // ConsolidadorPlantilla.inyectarTotales(mapaMesesCategorias);
 }

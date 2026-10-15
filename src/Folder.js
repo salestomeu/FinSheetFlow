@@ -44,7 +44,7 @@ const Folder = {
             const mimeType = file.getMimeType();
             const name = file.getName().toLowerCase();
             if (name.endsWith('.xlsx') || name.endsWith('.xls') || mimeType === "application/vnd.google-apps.spreadsheet") {
-                ExtractorXLSX.procesar(file, targetSheet, registroClaves, conceptosAOmitir, mapaCategorias);
+                ExtractorDinamicXLSX.procesar(file, targetSheet, registroClaves, conceptosAOmitir, mapaCategorias);
             } else if (mimeType === 'text/csv' || file.getName().toLowerCase().endsWith('.csv')) {
                 ExtractorCsv.procesar(file, targetSheet, registroClaves, conceptosAOmitir, mapaCategorias);
             } else if (mimeType.startsWith('image/') || mimeType === 'application/pdf') {
