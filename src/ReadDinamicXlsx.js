@@ -45,7 +45,7 @@ const ExtractorDinamicXLSX = {
 
             for (const key in mapaConfig) {
                 const conf = mapaConfig[key];
-                if (conf.tipoFichero !== 'xlsx') continue;
+                if (conf.tipoFichero !== 'xlsx' && conf.tipoFichero !== 'xls') continue;
                 Logger.log(`[Config] banco: "${conf.banco}"`);
 
                 // Ajustamos a índice base 0
@@ -81,7 +81,7 @@ const ExtractorDinamicXLSX = {
             if (!configAplicable) {
                 for (const key in mapaConfig) {
                     const conf = mapaConfig[key];
-                    if (conf.tipoFichero !== 'xlsx') continue;
+                    if (conf.tipoFichero !== 'xlsx' && conf.tipoFichero !== 'xls') continue;
 
                     const filaEncabezadoIdx = conf.encabezado > 0 ? (conf.encabezado - 1) : conf.titulo;
                     if (datosExcel[filaEncabezadoIdx] && datosExcel[filaEncabezadoIdx].length >= conf.longitud) {
